@@ -1,15 +1,16 @@
+//monsalud
 #include <iostream>
 using namespace std;
 
 struct Name{
-       char fullName[100];
+       char lastName[30];
+       char firstName[30];
 };
 
 struct Student{
        int id;
        Name name;
-       double quiz[3]; 
-       double sum;
+       double grade[3]; 
 	   double average;      
 };
 
@@ -21,32 +22,23 @@ int main(){
     cout << "ID: ";
     cin >> stud.id;
     newLine();
-    cout << "Name: ";
-    cin.getline(stud.name.fullName, 99);
+    cout << "First Name: ";
+    cin.getline(stud.name.firstName, 29);
+    cout << "Last Name: ";
+    cin.getline(stud.name.lastName, 29);
     for(int i=0; i<3; i++){
-            cout << "Quiz "<< i+1 << ": ";
-            cin >> stud.quiz[i];        
+            cout << "Grade "<< i+1 << ": ";
+            cin >> stud.grade[i];        
     }
     
     cout << "\n\n";
     cout << "Student Record\n";
     cout << "ID: " << stud.id << endl;
-    cout << "Name: " << stud.name.fullName << endl;
+    cout << "First Name: " << stud.name.firstName << endl;
+    cout << "Last Name: " << stud.name.lastName << endl;
     for(int i=0; i<3; i++){
-            cout << "Quiz "<< i+1 << ": " << stud.quiz[i] << endl;       
-            stud.sum+=stud.quiz[i];
-            stud.average=stud.sum/3;
+            cout << "Grade "<< i+1 << ": " << stud.grade[i] << endl;       
     }
-    cout<< "Grades: " << stud.average;
-    
-    if (stud.average>=75)
-    {
-    	cout << " \nRemarks: Passed";
-	}
-	else
-	{
-		cout << " \nRemarks: Failed";
-	}
     
     system("pause > 0");
     return 0;   
