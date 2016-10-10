@@ -1,12 +1,10 @@
 //Robert Russell N. Monsalud E21
 #include <iostream>
+#include <cmath>
 using namespace std;
 char b;
 int main()
 {
-	do
-	{
-		system("cls");
 		int hashmatArmy, opponentArmy, x;
 		while(cin>>hashmatArmy>>opponentArmy)
 		{
@@ -20,21 +18,17 @@ int main()
 				{
 					if (hashmatArmy<=opponentArmy)
 					{
-						cout<<opponentArmy-hashmatArmy<<endl;
+						cout<<abs(opponentArmy-hashmatArmy)<<endl;
 					}
 					else
 					{
-						goto c;
+						cout<<abs(opponentArmy-hashmatArmy)<<endl;
 					}
 				}
 			}
 		}
-		c:cout<<"Do you want to try again[Y/N]? ";
-		cin>>b;
-	} while ((b=='y')||(b=='Y'));
 	a:return 0;
 }
-
 
 
 
